@@ -1,0 +1,2 @@
+INSERT INTO users (username, pasword, pokemon1, pokemon2, pokemon3, pokemon4, pokemon5, pokemon6)
+VALUES  ( 'Tallisibeth-EnwandungEsterhazy','Scout', 'pikachu', 'mew', 'ditto', 'bonsly', 'flapple', 'meowth');

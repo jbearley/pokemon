@@ -1,0 +1,38 @@
+{
+  "name": "whodat",
+  "version": "1.0.0",
+  "description": "## Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test:integration": "jest --testPathPattern=integration-tests",
+    "test:unit": "jest --testPathPattern=src",
+    "lint": "eslint index.js src integration-tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com:cs188_s22/final-projects/whodat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/cs188_s22/final-projects/whodat/-/issues"
+  },
+  "homepage": "https://gitlab.com/cs188_s22/final-projects/whodat",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.18.1",
+    "pg": "^8.7.3"
+  }
+  
+}

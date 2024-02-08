@@ -1,0 +1,6 @@
+# Technically should ignore .env (with db username/password), but we're not going to for this project because it's dev environment only
+./server/node_modules/
+.vscode/
+.env/
+.node_modules/
+node_modules

@@ -1,0 +1,70 @@
+<center><h1>Welcome to our final project!</h1></center>
+<head><link rel="stylesheet" href="./style.css"></head>
+<body>     
+    <form style="float:left;" method="post" action="./team_page.html">
+    <h2> Login here!</h2>
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" id="username" required> 			<br> 
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" id="password" required> 		  <br>  
+            <button id="loginBtn" type="submit" onclick="loginUser()">Login</button>   
+        </div>
+    </form> 
+    <form id="createForm" style="float:right;" method="post" action="./team_page.html">
+   	<h2>Create a New User</h2>
+        <div class="container">   
+            <label>Username : </label>   
+            <input  type="text" placeholder="Enter Username" id ="username2" required> <br> 
+            <label>Password : </label>   
+            <input  type="password" placeholder="Enter Password" id="password2" required> <br> 
+                <button id="createBtn" type="submit" onclick="createUserPass()">Create User</button>
+        </div>   
+    </form>    
+</body>
+<script src = "./pokemon-repository.js"></script>
+<script>
+    const createUserPass = () => {
+        console.log(`is running code in html`);
+        let usern = document.getElementById("username2").value
+        let passw = document.getElementById("password2").value
+
+        const userURL = `http://127.0.0.1:3002/users`;
+        fetch(userURL, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({username: usern, pasword: passw})
+            });
+
+        console.log(`is running code after the fetch request`);
+        sessionStorage.setItem("username", usern)
+        sessionStorage.setItem("password", passw)
+
+
+    // const url = "team_page.html";
+    // window.location = window.location.href.replace("login_page.html","team_page.html");
+    //const url = "file:///home/noah/repository1/whodat/client/team_page.html";
+    //window.location(url)
+    ;}
+    
+    const loginUser = () => {
+        let usern = document.getElementById("username").value
+        let passw = document.getElementById("password").value
+        const userURL = `http://127.0.0.1:3002/users`;
+        fetch(userURL, {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({username: usern, pasword: passw})
+            })
+            .then((data) => data.json(data)
+        );
+        sessionStorage.setItem("username", usern)
+        sessionStorage.setItem("password", passw)
+    };
+</script>

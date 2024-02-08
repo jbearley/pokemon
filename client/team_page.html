@@ -1,0 +1,105 @@
+<html>
+<head><link rel="stylesheet" href="./team_style.css"></head>
+<body>
+    <center><h2>Pokemon Team Builder</h2></center>
+    <form method="post" action="./login_page.html">
+    <div><button type="submit" style="position:absolute;top:14;right:12;" onclick="logoutFunction()">Logout</button></div>
+    </form>
+    <table style="width:100%">
+        <caption>User's Team:</caption>
+        <tr>
+          <th> </th>
+          <th>Name:</th>
+          <th>ID:</th>
+          <th>Base Experience:</th>
+          <th>Height:</th>
+          <th>Weight:</th>
+          <th> </th>
+        </tr>
+        <tr>
+            <td>1.<input type="text" placeholder="Enter Pokemon" id="pokemon1" required></td>
+            <td id="name1"></td>
+            <td id="id1"></td>
+            <td id="exp1"></td>
+            <td id="height1"></td>
+            <td id="weight1"></td>
+            <td id="addBtn1"><input id="btn1" type="button" value="Add" onclick="getPokeId(1,user,pasword)"></td>
+        </tr>
+        <tr>
+            <td>2.<input type="text" placeholder="Enter Pokemon" id="pokemon2" required></td>
+            <td id="name2"></td>
+            <td id="id2"></td>
+            <td id="exp2"></td>
+            <td id="height2"></td>
+            <td id="weight2"></td>
+            <td id="addBtn2"><input id="btn2" type="button" value="Add" onclick="getPokeId(2,user,pasword)"></td>
+        </tr>
+        <tr>
+            <td>3.<input type="text" placeholder="Enter Pokemon" id="pokemon3" required></td>
+            <td id="name3"></td>
+            <td id="id3"></td>
+            <td id="exp3"></td>
+            <td id="height3"></td>
+            <td id="weight3"></td>
+            <td id="addBtn3"><input id="btn3" type="button" value="Add" onclick="getPokeId(3,user,pasword)"></td>
+        </tr>
+        <tr>
+            <td>4.<input type="text" placeholder="Enter Pokemon" id="pokemon4" required></td>
+            <td id="name4"></td>
+            <td id="id4"></td>
+            <td id="exp4"></td>
+            <td id="height4"></td>
+            <td id="weight4"></td>
+            <td id="addBtn4"><input id="btn4" type="button" value="Add" onclick="getPokeId(4,user,pasword)"></td>
+        </tr>
+        <tr>
+            <td>5.<input type="text" placeholder="Enter Pokemon" id="pokemon5" required></td>
+            <td id="name5"></td>
+            <td id="id5"></td>
+            <td id="exp5"></td>
+            <td id="height5"></td>
+            <td id="weight5"></td>
+            <td id="addBtn5"><input id="btn5" type="button" value="Add" onclick="getPokeId(5,user,pasword)"></td>
+        </tr>
+        <tr>
+            <td>6.<input type="text" placeholder="Enter Pokemon" id="pokemon6" required></td>
+            <td id="name6"></td>
+            <td id="id6"></td>
+            <td id="exp6"></td>
+            <td id="height6"></td>
+            <td id="weight6"></td>
+            <td id="addBtn6"><input id="btn6" type="button" value="Add" onclick="getPokeId(6,user,pasword)"></td>
+        </tr>
+      </table>
+
+<script src = "./pokemon-repository.js">
+</script>
+
+<script>
+
+
+
+
+
+// sessionStorage.setItem("username","Kal-buir");
+// sessionStorage.setItem("pasword","ehn-kal");
+
+
+
+// let user = 0;
+// console.log(user);
+let user = sessionStorage.getItem("username");
+let pasword = sessionStorage.getItem("pasword");
+// console.log(user);
+getUserPoke(user);
+
+    
+const logoutFunction = () =>{
+    sessionStorage.setItem("username", null)
+    sessionStorage.setItem("password", null)
+};
+    
+</script>
+
+</body>
+</html>

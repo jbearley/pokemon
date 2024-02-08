@@ -1,0 +1,25 @@
+{
+  "name": "whodat",
+  "version": "1.0.0",
+  "description": "Fork this project for your [final project](https://docs.google.com/document/d/1zarUpBDhqxlqP9EToogTC2tv0W3g_6JxofnJYOpIWXo/edit?usp=sharing) if you're planning on a node.js/postgres web app and would like a head start to focus on feature development.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/cs188_s22/final-projects/whodat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "lint": "^0.7.0",
+    "test": "^0.6.0"
+  },
+  "devDependencies": {}
+}
